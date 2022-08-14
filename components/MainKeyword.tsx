@@ -11,7 +11,7 @@ const MainKeyword = ({
 }) => {
   const [down, setDown] = useState(false);
   const keywordRef = useRef<HTMLDivElement>(null);
-  const { initialX, initialY } = useGetLocation(keywordRef);
+  const { initialX, initialY } = useGetLocation(keywordRef); // 현재 좌표 구하는 custom hook
   const [positionX, setPositionX] = useState(initialX);
   const [positionY, setPositionY] = useState(initialY);
 
@@ -40,7 +40,7 @@ const MainKeyword = ({
         onMouseUp={onMouseUp}
         onMouseMove={onMouseMove}
         className={cls(
-          "color bg-black w-[150px] h-[50px] desktop:w-[200px] desktop:h-[70px] rounded-full flex items-center justify-center flex-shrink-0  mb-4",
+          "color bg-black w-[150px] h-[50px] desktop:w-[200px] desktop:h-[70px] rounded-full flex items-center justify-center flex-shrink-0 mb-4 hover:cursor-pointer",
           down === true ? "mouseDown" : ""
         )}
       >
