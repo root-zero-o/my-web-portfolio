@@ -7,9 +7,13 @@ const useGetLocation = (keywordRef: React.RefObject<HTMLDivElement>) => {
   const [initialY, setInitialY] = useState(y);
 
   useEffect(() => {
-    setInitialX(x);
-    setInitialY(y);
-  }, [x, y]);
+    if (x) {
+      setInitialX(x - 150);
+    }
+    if (y) {
+      setInitialY(y - 35);
+    }
+  }, []);
   return { initialX, initialY };
 };
 export default useGetLocation;

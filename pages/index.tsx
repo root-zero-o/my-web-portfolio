@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 const index = () => {
   return (
-    <div className="w-screen h-screen flex-col relative overflow-x-hidden ">
+    <div className="w-screen h-screen flex-col relative overflow-x-hidden select-none">
       <NavBar />
       <div className=" w-full flex flex-col items-center justify-center space-y-20 py-40">
         <h1>안녕하세요!</h1>
