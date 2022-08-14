@@ -33,30 +33,32 @@ const MainKeyword = ({
   };
 
   return (
-    <div
-      ref={keywordRef}
-      onMouseDown={onMouseDown}
-      onMouseUp={onMouseUp}
-      onMouseMove={onMouseMove}
-      className={cls(
-        "color bg-black w-[150px] h-[35px] desktop:w-[200px] desktop:h-[70px] rounded-full flex items-center justify-center flex-shrink-0  mb-4",
-        down === true ? "mouseDown" : ""
-      )}
-    >
-      <span className="font-Pretendard_ExtraBold text-lg desktop:text-2xl">
-        {keyword}
-      </span>
-      <style jsx>{`
-        .color {
-          color: ${color};
-        }
-        .mouseDown {
-          position: absolute;
-          z-index: 1000;
-          left: ${positionX}px;
-          top: ${positionY}px;
-        }
-      `}</style>
+    <div className=" w-[150px] desktop:w-[200px]">
+      <div
+        ref={keywordRef}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+        onMouseMove={onMouseMove}
+        className={cls(
+          "color bg-black w-[150px] h-[50px] desktop:w-[200px] desktop:h-[70px] rounded-full flex items-center justify-center flex-shrink-0  mb-4",
+          down === true ? "mouseDown" : ""
+        )}
+      >
+        <span className="font-Pretendard_ExtraBold text-lg desktop:text-2xl">
+          {keyword}
+        </span>
+        <style jsx>{`
+          .color {
+            color: ${color};
+          }
+          .mouseDown {
+            position: absolute;
+            z-index: 1000;
+            left: ${positionX}px;
+            top: ${positionY}px;
+          }
+        `}</style>
+      </div>
     </div>
   );
 };

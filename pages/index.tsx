@@ -6,10 +6,10 @@ const index = () => {
   return (
     <div className="w-screen h-screen flex-col relative overflow-x-hidden select-none">
       <NavBar />
-      <div className="w-full flex justify-start px-8  py-8 desktop:hidden hover:cursor-pointer">
+      <div className="w-full flex justify-start px-8 pt-8 desktop:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
+          className="h-5 w-5 hover:cursor-pointer hover:text-gray-600"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -20,17 +20,16 @@ const index = () => {
           />
         </svg>
       </div>
-      <div className=" w-full flex flex-col items-center justify-center space-y-16 desktop:space-y-20 desktop:py-40 pb-10">
+      <div className=" w-full h-[65%] desktop:h-[85%] flex flex-col items-center justify-center space-y-16 desktop:space-y-20 desktop:py-40 ">
         <h1>안녕하세요!</h1>
         <div className="w-3/4 h-28 desktop:h-40 bg-gray-100 hover:bg-gray-300 transition-colors"></div>
         <h1>김근영입니다.</h1>
       </div>
-      <div className="w-full bg-white h-[10%] desktop:h-[0%]"></div>
-      <div className="w-full z-10">
+      <div className="w-full z-10 h-[20%] desktop:h-[15%] flex flex-col justify-center ">
         <h3 className="ml-4 pb-4">
           키워드를 드래그 해, 위 박스에 드롭해보세요!
         </h3>
-        <div className="w-full flex flex-wrap justify-evenly z-20">
+        <div className="w-full flex flex-wrap justify-evenly">
           <MainKeyword keyword="꿈" color="white" />
           <MainKeyword keyword="열정" color="#FF7816" />
           <MainKeyword keyword="새로움" color="#6D48FF" />

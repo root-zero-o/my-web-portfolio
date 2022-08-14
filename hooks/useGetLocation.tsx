@@ -11,7 +11,7 @@ const useGetLocation = (keywordRef: React.RefObject<HTMLDivElement>) => {
       setInitialX(x - 150);
     }
     if (y) {
-      setInitialY(y - 35);
+      setInitialY(y - 25);
     }
   }, []);
   return { initialX, initialY };
