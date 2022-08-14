@@ -6,6 +6,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      mobile: { min: "280px", max: "550px" },
+      desktop: { min: "768px" },
+    },
     extend: {
       fontFamily: {
         Pretendard_ExtraBold: ["Pretendard_ExtraBold", "sans-serif"],
@@ -23,6 +27,11 @@ module.exports = {
         ReactQuery: "#EB515A",
         SC: "#D775B2",
         Tailwind: "#07B6D5",
+        Apollo: "#112B49",
+        GraphQL: "#E535AB",
+        Git: "#F05033",
+        Figma: "#09CF83",
+        black: "#212121",
       },
     },
   },

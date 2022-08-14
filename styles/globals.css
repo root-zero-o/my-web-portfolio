@@ -24,10 +24,10 @@
 
 @layer base {
   h1 {
-    @apply font-Pretendard_ExtraBold text-8xl;
+    @apply font-Pretendard_ExtraBold text-6xl desktop:text-8xl;
   }
   h3 {
-    @apply font-Pretendard_Bold text-lg;
+    @apply font-Pretendard_Bold text-sm desktop:text-lg;
   }
 }
 

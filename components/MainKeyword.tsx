@@ -4,12 +4,10 @@ import { cls } from "../libs/utils";
 
 const MainKeyword = ({
   keyword,
-  bottom,
-  left,
+  color,
 }: {
   keyword: string;
-  bottom: number;
-  left: number;
+  color: string;
 }) => {
   const [down, setDown] = useState(false);
   const keywordRef = useRef<HTMLDivElement>(null);
@@ -29,8 +27,8 @@ const MainKeyword = ({
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (down) {
-      setPositionX(e.clientX - 100);
-      setPositionY(e.clientY - 30);
+      setPositionX(e.pageX - 100);
+      setPositionY(e.pageY - 30);
     }
   };
 
@@ -41,12 +39,17 @@ const MainKeyword = ({
       onMouseUp={onMouseUp}
       onMouseMove={onMouseMove}
       className={cls(
-        "bg-black w-[200px] h-[70px] rounded-full flex items-center justify-center text-white flex-shrink-0 mb-4",
+        "color bg-black w-[150px] h-[35px] desktop:w-[200px] desktop:h-[70px] rounded-full flex items-center justify-center flex-shrink-0  mb-4",
         down === true ? "mouseDown" : ""
       )}
     >
-      <span className="font-Pretendard_ExtraBold text-2xl">{keyword}</span>
+      <span className="font-Pretendard_ExtraBold text-lg desktop:text-2xl">
+        {keyword}
+      </span>
       <style jsx>{`
+        .color {
+          color: ${color};
+        }
         .mouseDown {
           position: absolute;
           z-index: 1000;

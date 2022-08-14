@@ -38,6 +38,18 @@ const skills = () => {
           <span className="text-Tailwind font-Pretendard_ExtraBold text-7xl">
             TailwindCSS
           </span>
+          <span className="text-Apollo font-Pretendard_ExtraBold text-7xl">
+            Apollo Client
+          </span>
+          <span className="text-GraphQL font-Pretendard_ExtraBold text-7xl">
+            GraphQL
+          </span>
+          <span className="text-Git font-Pretendard_ExtraBold text-7xl">
+            Git
+          </span>
+          <span className="text-Figma font-Pretendard_ExtraBold text-7xl">
+            Figma
+          </span>
         </p>
       </div>
     </div>
